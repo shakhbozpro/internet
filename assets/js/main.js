@@ -1,6 +1,7 @@
 const header = document.querySelector(".header-end");
 const logo = document.querySelector(".site-logo-img");
 const headerNavLinks = document.querySelectorAll(".header-nav-link");
+const headerModalLink = document.querySelectorAll(".header-modal-link");
 const strategyFirstLink = document.querySelector(".strategy-first-link");
 const strategySecondLink = document.querySelector(".strategy-second-link");
 const strategyThirdLink = document.querySelector(".strategy-third-link");
@@ -18,29 +19,57 @@ window.addEventListener('resize', function () {
   }
 });
 
-window.addEventListener('resize', function () {
-  if (window.innerWidth > 1024) {
-    window.addEventListener("scroll", function () {
-      if (window.pageYOffset > 0) {
-        header.classList.add("bg-white");
-        header.style.top = "0";
-        logo.src = "https://xido-demo.pbminfotech.com/html-demo/demo/images/internet/logo.svg";
-        headerNavLinks.forEach(item => {
-          item.classList.remove("lg:text-white");
-          item.classList.add("lg:text-black");
-        });
-      } else {
-        header.classList.remove("bg-white");
-        header.style.top = "44px"
-        logo.src = "https://xido-demo.pbminfotech.com/html-demo/demo/images/internet/logo-white.svg"
-        headerNavLinks.forEach(item => {
-          item.classList.remove("lg:text-black");
-          item.classList.add("lg:text-white");
-        });
-      }
-    });
-  }
-});
+// window.addEventListener('resize', function () {
+//   if (window.innerWidth > 1024) {
+//     window.addEventListener("scroll", function () {
+//       if (window.pageYOffset > 0) {
+//         header.classList.add("bg-white");
+//         header.style.top = "0";
+//         logo.src = "./assets/images/site-logo.png";
+//         headerNavLinks.forEach(item => {
+//           item.classList.remove("lg:text-white");
+//           item.classList.add("lg:text-black");
+//         });
+//       } else {
+//         header.classList.remove("bg-white");
+//         header.classList
+//         header.style.top = "44px"
+//         logo.src = "./assets/images/site-logo-white.png"
+//         headerNavLinks.forEach(item => {
+//           item.classList.remove("lg:text-black");
+//           item.classList.add("lg:text-white");
+//         });
+//       }
+//     });
+//   }
+// });
+
+if (window.innerWidth > 1024) {
+
+  window.addEventListener("scroll", function () {
+    if (window.pageYOffset > 0) {
+      header.classList.add("bg-white");
+      header.style.top = "0";
+      logo.src = "./assets/images/site-logo.png";
+      headerNavLinks.forEach(item => {
+        item.classList.remove("lg:text-white");
+        item.classList.add("lg:text-black");
+      });
+      headerModalLink.forEach(item => {
+        item.classList.remove("lg:bg-red-800");
+        item.classList.add("lg:bg-white");
+      });
+    } else {
+      header.classList.remove("bg-white");
+      header.style.top = "44px"
+      logo.src = "./assets/images/site-logo-white.png"
+      headerNavLinks.forEach(item => {
+        item.classList.remove("lg:text-black");
+        item.classList.add("lg:text-white");
+      });
+    }
+  });
+}
 
 strategyFirstLink.addEventListener("click", () => {
   strategyText.textContent = "Here, our authors share the latest trends and tendencies in the world of marketing, digital products, and web design, as well as useful tips."
