@@ -1,7 +1,7 @@
 const header = document.querySelector(".header-end");
 const logo = document.querySelector(".site-logo-img");
 const headerNavLinks = document.querySelectorAll(".header-nav-link");
-const headerModalLink = document.querySelectorAll(".header-modal-link");
+const headerModalLink = document.querySelector(".header-modal-link");
 const strategyFirstLink = document.querySelector(".strategy-first-link");
 const strategySecondLink = document.querySelector(".strategy-second-link");
 const strategyThirdLink = document.querySelector(".strategy-third-link");
@@ -9,6 +9,9 @@ const strategyText = document.querySelector(".strategy-text-value");
 const headerNav = document.querySelector(".header-nav");
 const openNavBtn = document.querySelector(".open-nav-btn");
 const closeNavBtn = document.querySelector(".header-nav-close-btn");
+const modalForm = document.querySelector(".modal-form");
+const modalStart = document.querySelector(".modal-start");
+const modalClosebtn = document.querySelector(".form-cansel-btn");
 
 window.addEventListener('resize', function () {
   if (window.innerWidth < 1024) {
@@ -19,57 +22,48 @@ window.addEventListener('resize', function () {
   }
 });
 
-// window.addEventListener('resize', function () {
-//   if (window.innerWidth > 1024) {
-//     window.addEventListener("scroll", function () {
-//       if (window.pageYOffset > 0) {
-//         header.classList.add("bg-white");
-//         header.style.top = "0";
-//         logo.src = "./assets/images/site-logo.png";
-//         headerNavLinks.forEach(item => {
-//           item.classList.remove("lg:text-white");
-//           item.classList.add("lg:text-black");
-//         });
-//       } else {
-//         header.classList.remove("bg-white");
-//         header.classList
-//         header.style.top = "44px"
-//         logo.src = "./assets/images/site-logo-white.png"
-//         headerNavLinks.forEach(item => {
-//           item.classList.remove("lg:text-black");
-//           item.classList.add("lg:text-white");
-//         });
-//       }
-//     });
-//   }
-// });
-
 if (window.innerWidth > 1024) {
-
   window.addEventListener("scroll", function () {
     if (window.pageYOffset > 0) {
-      header.classList.add("bg-white");
+      header.classList.remove("lg:py-10");
+      header.classList.add("bg-white", "lg:py-0");
       header.style.top = "0";
       logo.src = "./assets/images/site-logo.png";
       headerNavLinks.forEach(item => {
         item.classList.remove("lg:text-white");
         item.classList.add("lg:text-black");
       });
-      headerModalLink.forEach(item => {
-        item.classList.remove("lg:bg-red-800");
-        item.classList.add("lg:bg-white");
-      });
+      headerModalLink.classList.add("text-white");
+      headerModalLink.classList.replace("bg-white", "bg-slate-800");
     } else {
-      header.classList.remove("bg-white");
+      header.classList.add("py-10"); // ! paddingni to'g'irlash
+      header.classList.remove("bg-white", "lg:py-0");
       header.style.top = "44px"
       logo.src = "./assets/images/site-logo-white.png"
       headerNavLinks.forEach(item => {
         item.classList.remove("lg:text-black");
         item.classList.add("lg:text-white");
       });
+      headerModalLink.classList.remove("text-white");
+      headerModalLink.classList.add("text-black");
+      headerModalLink.classList.replace("bg-slate-800", "bg-white");
     }
   });
 }
+
+headerModalLink.addEventListener("click", () => {
+  modalStart.style.transform = "translateY(0)";
+  document.body.style.overflow = "hidden";
+});
+
+modalForm.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+})
+
+modalClosebtn.addEventListener("click", () => {
+  modalStart.style.transform = "translateY(-150%)";
+  document.body.style.overflow = "scroll";
+})
 
 strategyFirstLink.addEventListener("click", () => {
   strategyText.textContent = "Here, our authors share the latest trends and tendencies in the world of marketing, digital products, and web design, as well as useful tips."
@@ -92,6 +86,23 @@ openNavBtn.addEventListener("click", () => {
 closeNavBtn.addEventListener("click", () => {
   headerNav.style.transform = "translateX(100%)";
   document.body.style.overflow = "scroll";
+});
+
+// Galery carousel
+$('.galery-xl-images-list').slick({
+  arrows: false,
+});
+
+$('.galery-lg-images-list').slick({
+  arrows: false,
+});
+
+$('.galery-md-images-list').slick({
+  arrows: false,
+});
+
+$('.galery-sm-images-list').slick({
+  arrows: false,
 });
 
 // Carousel

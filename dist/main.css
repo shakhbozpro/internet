@@ -825,11 +825,6 @@ video {
   background-color: rgb(245 158 11 / var(--tw-bg-opacity));
 }
 
-.bg-red-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(153 27 27 / var(--tw-bg-opacity));
-}
-
 .bg-slate-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
@@ -930,6 +925,10 @@ video {
   padding-bottom: 60px;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
 .pb-3 {
   padding-bottom: 0.75rem;
 }
@@ -960,6 +959,10 @@ video {
 
 .pt-\[100px\] {
   padding-top: 100px;
+}
+
+.pt-\[120px\] {
+  padding-top: 120px;
 }
 
 .pt-\[150px\] {
