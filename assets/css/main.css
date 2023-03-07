@@ -12,6 +12,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 html {
    line-height: 1.15;
    /* 1 */
@@ -391,7 +398,8 @@ p {
    min-width: 160px;
    padding: 12px 16px;
    background-color: #f9f9f9;
-   box-shadow: 0px 8px 16px 0px #00000033;
+   -webkit-box-shadow: 0px 8px 16px 0px #00000033;
+           box-shadow: 0px 8px 16px 0px #00000033;
    border-radius: 8px;
 }
 
