@@ -36,7 +36,7 @@ if (window.innerWidth > 1024) {
       headerModalLink.classList.add("text-white");
       headerModalLink.classList.replace("bg-white", "bg-slate-800");
     } else {
-      header.classList.add("py-10"); // ! paddingni to'g'irlash
+      header.classList.add("py-10");
       header.classList.remove("bg-white", "lg:py-0");
       header.style.top = "44px"
       logo.src = "./assets/images/site-logo-white.png"
@@ -91,25 +91,36 @@ closeNavBtn.addEventListener("click", () => {
 // Galery carousel
 $('.galery-xl-images-list').slick({
   arrows: false,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
 });
 
 $('.galery-lg-images-list').slick({
   arrows: false,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
 });
 
 $('.galery-md-images-list').slick({
   arrows: false,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
 });
 
 $('.galery-sm-images-list').slick({
   arrows: false,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
 });
 
 // Carousel
 $('.service-cards-list').slick({
-  slidesToShow: 4,
+  slidesToShow: 3,
   slidesToScroll: 1,
-  // variableWidth: true,
   responsive: [
     {
       breakpoint: 1000,
