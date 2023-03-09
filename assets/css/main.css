@@ -982,11 +982,12 @@ p {
    width: 100vw;
    height: 100vh;
    padding-top: 100px;
-   background-color: rgba(0, 0, 0, 0.705);
+   background-color: #000000b4;
 }
 
 .modal {
-   width: 600px;
+   max-width: 600px;
+   width: 100%;
    margin: 0 auto;
    padding: 20px 40px;
    color: #000000;

@@ -80,13 +80,17 @@ strategyThirdLink.addEventListener("click", () => {
 openNavBtn.addEventListener("click", () => {
   headerNav.style.transition = "all 0.5s ease";
   headerNav.style.transform = "translateX(0)";
-  document.body.style.overflow = "hidden";
+  // document.body.style.overflow = "hidden";
 });
 
 closeNavBtn.addEventListener("click", () => {
   headerNav.style.transform = "translateX(100%)";
-  document.body.style.overflow = "scroll";
+  // document.body.style.overflow = "scroll";
 });
+
+window.addEventListener("scroll", () => {
+  headerNav.style.transform = "translateX(100%)";
+})
 
 // Galery carousel
 $('.galery-xl-images-list').slick({
