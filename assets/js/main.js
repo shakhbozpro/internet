@@ -49,8 +49,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-
-
 headerModalLink.addEventListener("click", () => {
   modalStart.style.transform = "translateY(0)";
   document.body.style.overflow = "hidden";
@@ -58,12 +56,14 @@ headerModalLink.addEventListener("click", () => {
 
 modalForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
-})
+  modalStart.style.transform = "translateY(-150%)";
+  document.body.style.overflow = "scroll";
+});
 
 modalClosebtn.addEventListener("click", () => {
   modalStart.style.transform = "translateY(-150%)";
   document.body.style.overflow = "scroll";
-})
+});
 
 strategyFirstLink.addEventListener("click", () => {
   strategyText.textContent = "Here, our authors share the latest trends and tendencies in the world of marketing, digital products, and web design, as well as useful tips."
