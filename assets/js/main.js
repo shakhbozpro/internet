@@ -75,6 +75,7 @@ modalForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
   modalStart.style.transform = "translateY(-150%)";
   document.body.style.overflow = "scroll";
+  modalForm.reset()
 });
 
 modalClosebtn.addEventListener("click", () => {
@@ -143,6 +144,8 @@ $('.service-cards-list').slick({
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
       }
     }
   ]
