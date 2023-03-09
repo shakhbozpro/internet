@@ -416,7 +416,7 @@ p {
    }
    .header-nav {
       position: static !important;
-      display: block;
+      display: block !important;
       top: 0;
       max-width: -webkit-max-content;
       max-width: -moz-max-content;
