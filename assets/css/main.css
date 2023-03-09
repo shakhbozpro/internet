@@ -375,7 +375,7 @@ p {
 
 .header-nav {
    position: absolute;
-   top: 0;
+   top: -45px;
    right: 0;
    z-index: 5;
    max-width: 300px;
@@ -438,21 +438,10 @@ p {
    border-bottom: 1px solid gray;
 }
 
-.header-end-link {
-   display: none;
+.header-menu-btn {
+   font-size: 20px;
+   color: #FEA82B;
 }
-
-@media only screen and (min-width: 1280px) {
-   .header-end-link {
-      display: block !important;
-   }
-}
-
-/* @media only screen and (min-width: 1024px) {
-   .header-nav-item {
-      border-bottom: 0;
-   }
-} */
 
 .header-nav-link:focus {
    color: #FEA82B;

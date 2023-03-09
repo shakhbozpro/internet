@@ -30,8 +30,7 @@ if (window.innerWidth > 1024) {
       header.style.top = "0";
       logo.src = "./assets/images/site-logo.png";
       headerNavLinks.forEach(item => {
-        item.classList.remove("lg:text-white");
-        item.classList.add("lg:text-black");
+        item.classList.replace("lg:text-white", "lg:text-black");
       });
       headerModalLink.classList.add("text-white");
       headerModalLink.classList.replace("bg-white", "bg-slate-800");
@@ -41,8 +40,7 @@ if (window.innerWidth > 1024) {
       header.style.top = "44px"
       logo.src = "./assets/images/site-logo-white.png"
       headerNavLinks.forEach(item => {
-        item.classList.remove("lg:text-black");
-        item.classList.add("lg:text-white");
+        item.classList.replace("lg:text-black", "lg:text-white");
       });
       headerModalLink.classList.remove("text-white");
       headerModalLink.classList.add("text-black");
@@ -121,6 +119,8 @@ $('.galery-sm-images-list').slick({
 $('.service-cards-list').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 1500,
   responsive: [
     {
       breakpoint: 1000,
@@ -144,6 +144,8 @@ $('.employees-list').slick({
   centerMode: true,
   centerPadding: '90px',
   slidesToShow: 3,
+  autoplay: true,
+  autoplaySpeed: 1500,
   arrows: false,
   dots: true,
   responsive: [
