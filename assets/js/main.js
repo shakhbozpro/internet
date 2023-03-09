@@ -22,8 +22,8 @@ window.addEventListener('resize', function () {
   }
 });
 
-if (window.innerWidth > 1024) {
-  window.addEventListener("scroll", function () {
+window.addEventListener("scroll", function () {
+  if (window.innerWidth > 1024) {
     if (window.pageYOffset > 0) {
       header.classList.remove("lg:py-10");
       header.classList.add("bg-white", "lg:py-0");
@@ -37,17 +37,19 @@ if (window.innerWidth > 1024) {
     } else {
       header.classList.add("py-10");
       header.classList.remove("bg-white", "lg:py-0");
-      header.style.top = "44px"
-      logo.src = "./assets/images/site-logo-white.png"
+      header.style.top = "44px";
+      logo.src = "./assets/images/site-logo-white.png";
       headerNavLinks.forEach(item => {
         item.classList.replace("lg:text-black", "lg:text-white");
       });
       headerModalLink.classList.remove("text-white");
       headerModalLink.classList.add("text-black");
       headerModalLink.classList.replace("bg-slate-800", "bg-white");
-    }
-  });
-}
+    };
+  }
+});
+
+
 
 headerModalLink.addEventListener("click", () => {
   modalStart.style.transform = "translateY(0)";

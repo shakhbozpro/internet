@@ -373,9 +373,13 @@ p {
    color: #FEA82B;
 }
 
+.header-end {
+   background-color: #263044;
+}
+
 .header-nav {
    position: absolute;
-   top: -45px;
+   top: 0;
    right: 0;
    z-index: 5;
    max-width: 300px;
@@ -408,6 +412,9 @@ p {
  }
 
 @media only screen and (min-width: 1024px) {
+   .header-end {
+      background-color: transparent;
+   }
    .header-nav {
       position: static !important;
       display: block;
