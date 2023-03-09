@@ -13,6 +13,7 @@ const modalForm = document.querySelector(".modal-form");
 const modalStart = document.querySelector(".modal-start");
 const modalClosebtn = document.querySelector(".form-cansel-btn");
 
+// Header onscroll event
 window.addEventListener('resize', function () {
   if (window.innerWidth < 1024) {
     headerNavLinks.forEach(item => {
@@ -49,6 +50,22 @@ window.addEventListener("scroll", function () {
   }
 });
 
+// Navbar opening and closing
+openNavBtn.addEventListener("click", () => {
+  headerNav.style.display = "block";
+  document.body.style.overflow = "hidden";
+});
+
+closeNavBtn.addEventListener("click", () => {
+  headerNav.style.display = "none";
+  document.body.style.overflow = "scroll";
+});
+
+window.addEventListener("scroll", () => {
+  headerNav.style.display = "none";
+});
+
+// Modal opening and closing
 headerModalLink.addEventListener("click", () => {
   modalStart.style.transform = "translateY(0)";
   document.body.style.overflow = "hidden";
@@ -65,6 +82,7 @@ modalClosebtn.addEventListener("click", () => {
   document.body.style.overflow = "scroll";
 });
 
+// Strategy links onclick events
 strategyFirstLink.addEventListener("click", () => {
   strategyText.textContent = "Here, our authors share the latest trends and tendencies in the world of marketing, digital products, and web design, as well as useful tips."
 });
@@ -76,21 +94,6 @@ strategySecondLink.addEventListener("click", () => {
 strategyThirdLink.addEventListener("click", () => {
   strategyText.textContent = "Stay ahead authors share the latest trends and tendencies in the world of marketing, digital products, and web design, as well as useful tips."
 });
-
-openNavBtn.addEventListener("click", () => {
-  headerNav.style.transition = "all 0.5s ease";
-  headerNav.style.transform = "translateX(0)";
-  // document.body.style.overflow = "hidden";
-});
-
-closeNavBtn.addEventListener("click", () => {
-  headerNav.style.transform = "translateX(100%)";
-  // document.body.style.overflow = "scroll";
-});
-
-window.addEventListener("scroll", () => {
-  headerNav.style.transform = "translateX(100%)";
-})
 
 // Galery carousel
 $('.galery-xl-images-list').slick({
@@ -121,7 +124,7 @@ $('.galery-sm-images-list').slick({
   autoplaySpeed: 2000,
 });
 
-// Carousel
+// Service carousel
 $('.service-cards-list').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
