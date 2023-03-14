@@ -33,6 +33,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 html {
    line-height: 1.15;
    /* 1 */
@@ -1090,20 +1097,4 @@ p {
    display: inline-block;
    color: #000000;
    margin: 0 8px;
-}
-
-.choice-mini-title::before {
-   position: absolute;
-   top: calc(50% - 0.5px);
-   left: -60px;
-   z-index: 5;
-   width: 50px;
-   height: 1px;
-   background-color: #000000;
-   content: "";
-}
-
-.choice-link-item:not(:last-child) {
-   border-bottom: 1px solid #808080;
-   margin-bottom: 10px;
 }

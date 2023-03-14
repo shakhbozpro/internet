@@ -27,30 +27,34 @@ window.addEventListener('resize', function () {
 
 window.addEventListener("scroll", function () {
   if (window.innerWidth > 1024) {
-    if (window.pageYOffset > 0) {
-      header.classList.remove("lg:py-10");
-      header.classList.add("bg-white", "lg:py-0");
-      header.style.top = "0";
-      logo.src = "./assets/images/site-logo.png";
-      headerNavLinks.forEach(item => {
-        item.classList.replace("lg:text-white", "lg:text-black");
-      });
-      headerModalLink.classList.add("text-white");
-      headerModalLink.classList.replace("bg-white", "bg-slate-800");
-    } else {
-      header.classList.add("py-10");
-      header.classList.remove("bg-white", "lg:py-0");
-      header.style.top = "44px";
-      logo.src = "./assets/images/site-logo-white.png";
-      headerNavLinks.forEach(item => {
-        item.classList.replace("lg:text-black", "lg:text-white");
-      });
-      headerModalLink.classList.remove("text-white");
-      headerModalLink.classList.add("text-black");
-      headerModalLink.classList.replace("bg-slate-800", "bg-white");
+    if (header) {
+      if (window.pageYOffset > 0) {
+        header.classList.remove("lg:py-10");
+        header.classList.add("bg-white", "lg:py-0");
+        header.style.top = "0";
+        logo.src = "./assets/images/site-logo.png";
+        headerNavLinks.forEach(item => {
+          item.classList.replace("lg:text-white", "lg:text-black");
+        });
+        headerModalLink.classList.add("text-white");
+        headerModalLink.classList.replace("bg-white", "bg-slate-800");
+      } else {
+        header.classList.remove("bg-white", "lg:py-0");
+        header.classList.add("py-10");
+        header.style.top = "44px";
+        logo.src = "./assets/images/site-logo-white.png";
+        headerNavLinks.forEach(item => {
+          item.classList.replace("lg:text-black", "lg:text-white");
+        });
+        headerModalLink.classList.remove("text-white");
+        headerModalLink.classList.add("text-black");
+        headerModalLink.classList.replace("bg-slate-800", "bg-white");
+      };
+    }
+    else {
       aboutHeader.classList.remove("py-10");
       aboutHeader.style.top = "0";
-    };
+    }
   }
 });
 
@@ -87,18 +91,20 @@ modalClosebtn.addEventListener("click", () => {
   document.body.style.overflow = "scroll";
 });
 
-// Strategy links onclick events
-strategyFirstLink.addEventListener("click", () => {
-  strategyText.textContent = "Here, our authors share the latest trends and tendencies in the world of marketing, digital products, and web design, as well as useful tips."
-});
+if (header) {
+  // Strategy links onclick events
+  strategyFirstLink.addEventListener("click", () => {
+    strategyText.textContent = "Here, our authors share the latest trends and tendencies in the world of marketing, digital products, and web design, as well as useful tips."
+  });
 
-strategySecondLink.addEventListener("click", () => {
-  strategyText.textContent = "The world authors share the latest trends and tendencies in the world of marketing, digital products, and web design, as well as useful tips."
-});
+  strategySecondLink.addEventListener("click", () => {
+    strategyText.textContent = "The world authors share the latest trends and tendencies in the world of marketing, digital products, and web design, as well as useful tips."
+  });
 
-strategyThirdLink.addEventListener("click", () => {
-  strategyText.textContent = "Stay ahead authors share the latest trends and tendencies in the world of marketing, digital products, and web design, as well as useful tips."
-});
+  strategyThirdLink.addEventListener("click", () => {
+    strategyText.textContent = "Stay ahead authors share the latest trends and tendencies in the world of marketing, digital products, and web design, as well as useful tips."
+  });
+}
 
 // Galery carousel
 $('.galery-xl-images-list').slick({
