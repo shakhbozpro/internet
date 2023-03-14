@@ -26,6 +26,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 html {
    line-height: 1.15;
    /* 1 */
@@ -293,6 +300,9 @@ template {
 
 /* General codes */
 html {
+   height: 100%;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
    scroll-behavior: smooth;
    overflow-x: hidden;
 }
@@ -303,6 +313,13 @@ html {
 }
 
 body {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
    margin: 0;
    padding: 0;
    font-size: 16px;
@@ -350,6 +367,12 @@ p {
    margin: 0;
 }
 
+.main {
+   -webkit-box-flex: 1;
+       -ms-flex-positive: 1;
+           flex-grow: 1;
+}
+
 .header {
    font-family: 'DM Sans', sans-serif 
 }
@@ -362,14 +385,6 @@ p {
 .header-email-icon,
 .header-clock-icon {
    color: #FEA82B;
-}
-
-.header-facebook-icon,
-.header-twitter-icon,
-.header-instagram-icon,
-.header-youtube-icon {
-   font-size: 18px;
-   color: white;
 }
 
 .header-facebook-icon:hover,
@@ -1067,4 +1082,28 @@ p {
    color: white;
    background-color: green !important;
    border-radius: 10px;
+}
+
+/* ! About page's styles */
+.about-hero-link-item:not(:last-child)::after {
+   content: "->";
+   display: inline-block;
+   color: #000000;
+   margin: 0 8px;
+}
+
+.choice-mini-title::before {
+   position: absolute;
+   top: calc(50% - 0.5px);
+   left: -60px;
+   z-index: 5;
+   width: 50px;
+   height: 1px;
+   background-color: #000000;
+   content: "";
+}
+
+.choice-link-item:not(:last-child) {
+   border-bottom: 1px solid #808080;
+   margin-bottom: 10px;
 }

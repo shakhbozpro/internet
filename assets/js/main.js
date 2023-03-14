@@ -1,4 +1,5 @@
 const header = document.querySelector(".header-end");
+const aboutHeader = document.querySelector(".about-header");
 const logo = document.querySelector(".site-logo-img");
 const headerNavLinks = document.querySelectorAll(".header-nav-link");
 const headerModalLink = document.querySelector(".header-modal-link");
@@ -9,6 +10,7 @@ const strategyText = document.querySelector(".strategy-text-value");
 const headerNav = document.querySelector(".header-nav");
 const openNavBtn = document.querySelector(".open-nav-btn");
 const closeNavBtn = document.querySelector(".header-nav-close-btn");
+const aboutHeaderBrandsLink = document.querySelectorAll(".about-header-brands-link");
 const modalForm = document.querySelector(".modal-form");
 const modalStart = document.querySelector(".modal-start");
 const modalClosebtn = document.querySelector(".form-cansel-btn");
@@ -46,6 +48,8 @@ window.addEventListener("scroll", function () {
       headerModalLink.classList.remove("text-white");
       headerModalLink.classList.add("text-black");
       headerModalLink.classList.replace("bg-slate-800", "bg-white");
+      aboutHeader.classList.remove("py-10");
+      aboutHeader.style.top = "0";
     };
   }
 });
