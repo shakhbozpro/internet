@@ -734,14 +734,6 @@ video {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.grid-rows-1 {
-  grid-template-rows: repeat(1, minmax(0, 1fr));
-}
-
-.grid-rows-3 {
-  grid-template-rows: repeat(3, minmax(0, 1fr));
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -1018,6 +1010,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .text-2xl {
@@ -1313,10 +1309,6 @@ video {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .md\:grid-rows-3 {
-    grid-template-rows: repeat(3, minmax(0, 1fr));
-  }
-
   .md\:flex-row {
     flex-direction: row;
   }
@@ -1404,10 +1396,6 @@ video {
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-5 {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
   .lg\:flex-row {
@@ -1546,10 +1534,6 @@ video {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .xl\:items-start {
-    align-items: flex-start;
-  }
-
   .xl\:items-center {
     align-items: center;
   }
@@ -1622,10 +1606,5 @@ video {
   .\32xl\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
-  }
-
-  .\32xl\:px-20 {
-    padding-left: 5rem;
-    padding-right: 5rem;
   }
 }
