@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internet - Blog</title>
+  <!-- <link rel="stylesheet" href="./assets/css/main.css"> -->
+  <link rel="stylesheet" href="./assets/css/main.min.css">
+  <link rel="stylesheet" href="./vender/dist/main.css">
+  <link rel="stylesheet" href="vender/slick/slick.css">
+  <link rel="stylesheet" href="vender/slick/slick-theme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
+</head>
+
+<body>
+  <!-- Site header -->
+  <header class="header">
+    <div class="about-header py-2 bg-white transition-all duration-300 lg:fixed lg:z-10 lg:left-0 lg:right-0">
+      <div class="container mx-auto px-4 2xl:px-10">
+        <div class="flex items-center justify-between">
+          <a href="index.html">
+            <img class="site-logo-img" src="./assets/images/site-logo.png" alt="" width="250px" height="60px">
+          </a>
+          <button class="open-nav-btn lg:hidden">
+            <i class="fa-solid fa-bars header-menu-btn"></i>
+          </button>
+          <nav class="header-nav pt-[85px] lg:pt-0" style="display: none;">
+            <button class="header-nav-close-btn lg:hidden">
+              <img src="./assets/images/close-btn.svg" alt="close button for navbar" width="25" height="25">
+            </button>
+            <ul class="flex flex-col lg:flex-row lg:items-center lg:gap-x-3">
+              <li class="header-nav-item">
+                <a class="header-nav-link font-semibold text-sm uppercase hover:text-amber-400"
+                  href="index.html">Home</a>
+              </li>
+              <li class="header-nav-item">
+                <a class="header-nav-link font-semibold text-sm uppercase hover:text-amber-400" href="#">About
+                  us</a>
+              </li>
+              <li class="header-nav-item">
+                <div
+                  class="header-end-select header-nav-link font-semibold cursor-pointer text-sm uppercase bg-transparent hover:text-amber-400">
+                  <a class="header-select-link" href="#">Services</a>
+                  <div class="header-end-select-content gap-5">
+                    <a class="inline-block mb-3 text-black" href="#">Services</a>
+                    <a class="inline-block mb-3 text-black" href="#">WiFi Hotspot</a>
+                    <a class="inline-block mb-3 text-black" href="#">WiFi Installing</a>
+                    <a class="inline-block mb-3 text-black" href="#">Price List</a>
+                  </div>
+                </div>
+              </li>
+              <li class="header-nav-item">
+                <a class="header-nav-link font-semibold text-sm uppercase hover:text-amber-400" href="#">Blog</a>
+              </li>
+              <li class="header-nav-item">
+                <a class="header-nav-link font-semibold text-sm uppercase hover:text-amber-400" href="#">Contact
+                  us</a>
+              </li>
+              <li class="header-nav-item hidden xl:block">
+                <ul class="flex items-center gap-x-5">
+                  <li>
+                    <a href="https://www.facebook.com/" target="_blank">
+                      <i class="fa-brands fa-square-facebook header-facebook-icon about-header-brands-link"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/" target="_blank">
+                      <i class="fa-brands fa-twitter header-twitter-icon about-header-brands-link"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                      <i class="fa-brands fa-instagram header-instagram-icon about-header-brands-link"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.youtube.com/" target="_blank">
+                      <i class="fa-brands fa-youtube header-youtube-icon about-header-brands-link"></i>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header-nav-item header-end-link">
+                <a class="header-modal-link inline-block py-2 px-4 font-semibold text-sm uppercase text-white bg-slate-800 rounded-full hover:bg-amber-500 xl:py-5 xl:px-10"
+                  href="#">Get in touch
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Site main -->
+  <main>
+    <section class="py-14 xl:py-44">
+      <div class="container mx-auto px-4 lg:px-20">
+        <div class="grid grid-cols-1 grid-flow-row items-start gap-y-8 xl:grid-cols-3">
+          <ul class="xl:col-span-2" id="blog-posts">
+            <li class="blog-post max-w-[880px] w-full" data-category="news">
+              <img class="mb-5" src="./assets/images/post-2.jpg" alt="" width="880" height="500">
+              <div>
+                <ul class="flex flex-wrap items-center gap-y-2 gap-x-4 xl:gap-x-8">
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-calendar mr-2 text-orange-400"></i>
+                    <time class="text-[14px] text-neutral-600" datetime="2023-03-13">March 13, 2023</time>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-user mr-2 text-orange-400"></i>
+                    <span class="text-[14px] text-neutral-600">Tom Holand</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-eye mr-2 text-orange-400"></i>
+                    <span class="text-[14px] text-neutral-600">1,203</span>
+                  </li>
+                </ul>
+                <h3 class="mb-3 font-semibold text-2xl leading-8 md:text-3xl md:leading-10">
+                  Premium custom office solution solves Growfusely's growing
+                </h3>
+                <p class="mb-5 font-semibold text-neutral-500">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore harum, animi, suscipit omnis adipisci
+                  dicta quod fuga sapiente in, asperiores veritatis! Quidem earum pariatur distinctio, odio et sit omnis
+                  repellendus eum? Consequuntur odit suscipit ea.
+                </p>
+                <a class="flex items-center ml-auto font-bold text-[14px] uppercase text-orange-600" href="#">
+                  <span>Read more</span>
+                  <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </li>
+            <li class="blog-post max-w-[880px] w-full" data-category="tutorials">
+              <img class="mb-5" src="./assets/images/post-4.jpg" alt="" width="880" height="500">
+              <div>
+                <ul class="flex flex-wrap items-center gap-y-2 gap-x-4 xl:gap-x-8">
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-calendar mr-2 text-orange-400"></i>
+                    <time class="text-[14px] text-neutral-600" datetime="2023-02-10">February 10, 2023</time>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-user mr-2 text-orange-400"></i>
+                    <span class="text-[14px] text-neutral-600">Scott McCall</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-eye mr-2 text-orange-400"></i>
+                    <span class="text-[14px] text-neutral-600">1,554</span>
+                  </li>
+                </ul>
+                <h3 class="mb-3 font-semibold text-2xl leading-8 md:text-3xl md:leading-10">
+                  Health management firm scales its operations with a managed
+                </h3>
+                <p class="mb-5 font-semibold text-neutral-500">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id recusandae unde, inventore mollitia alias
+                  est suscipit numquam ipsam cupiditate laborum optio ducimus perferendis? Delectus repudiandae deserunt
+                  exercitationem expedita illum quos.
+                </p>
+                <a class="flex items-center ml-auto font-bold text-[14px] uppercase text-orange-600" href="#">
+                  <span>Read more</span>
+                  <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </li>
+            <li class="blog-post max-w-[880px] w-full" data-category="opinion">
+              <img class="mb-5" src="./assets/images/post-9.jpg" alt="" width="880" height="500">
+              <div>
+                <ul class="flex flex-wrap items-center gap-y-2 gap-x-4 xl:gap-x-8">
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-calendar mr-2 text-orange-400"></i>
+                    <time class="text-[14px] text-neutral-600" datetime="2023-02-10">January 29, 2023</time>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-user mr-2 text-orange-400"></i>
+                    <span class="text-[14px] text-neutral-600">Crystal Reed</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-eye mr-2 text-orange-400"></i>
+                    <span class="text-[14px] text-neutral-600">1,807</span>
+                  </li>
+                </ul>
+                <h3 class="mb-3 font-semibold text-2xl leading-8 md:text-3xl md:leading-10">
+                  Easy ways to implement wellbeing programs
+                </h3>
+                <p class="mb-5 font-semibold text-neutral-500">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quisquam eos corporis molestias sequi
+                  distinctio veniam impedit, error quaerat vitae doloremque debitis mollitia minus fugit perspiciatis
+                  tempore esse?
+                </p>
+                <a class="flex items-center ml-auto font-bold text-[14px] uppercase text-orange-600" href="#">
+                  <span>Read more</span>
+                  <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </li>
+            <li class="blog-post max-w-[880px] w-full" data-category="news">
+              <img class="mb-5" src="./assets/images/post-2.jpg" alt="" width="880" height="500">
+              <div>
+                <ul class="flex flex-wrap items-center gap-y-2 gap-x-4 xl:gap-x-8">
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-calendar mr-2 text-orange-400"></i>
+                    <time class="text-[14px] text-neutral-600" datetime="2022-04-12">April 12, 2022</time>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-user mr-2 text-orange-400"></i>
+                    <span class="text-[14px] text-neutral-600">Tyler Hoechlin</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-eye mr-2 text-orange-400"></i>
+                    <span class="text-[14px] text-neutral-600">981</span>
+                  </li>
+                </ul>
+                <h2 class="mb-3 font-semibold text-2xl leading-8 md:text-3xl md:leading-10">
+                  Things Can Help Any coworking Flourish Again
+                </h2>
+                <p class="mb-5 font-semibold text-neutral-500">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta at inventore minima nemo
+                  reprehenderit error qui labore est similique ut beatae omnis delectus culpa magnam, officia voluptate
+                  dignissimos ducimus. Magnam?
+                </p>
+                <a class="flex items-center ml-auto font-bold text-[14px] uppercase text-orange-600" href="#">
+                  <span>Read more</span>
+                  <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </li>
+            <li class="blog-post max-w-[880px] w-full" data-category="tutorials">
+              <img class="mb-5" src="./assets/images/post-4.jpg" alt="" width="880" height="500">
+              <div>
+                <ul class="flex flex-wrap items-center gap-y-2 gap-x-4 xl:gap-x-8">
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-calendar mr-2 text-orange-400"></i>
+                    <time class="text-[14px] text-neutral-600" datetime="2022-03-21">March 21, 2022</time>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-user mr-2 text-orange-400"></i>
+                    <span class="text-[14px] text-neutral-600">Arden Cho</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-eye mr-2 text-orange-400"></i>
+                    <span class="text-[14px] text-neutral-600">2,349</span>
+                  </li>
+                </ul>
+                <h2 class="mb-3 font-semibold text-2xl leading-8 md:text-3xl md:leading-10">
+                  Five Ways Elevate Your Employees Workplace
+                </h2>
+                <p class="mb-5 font-semibold text-neutral-500">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae ex voluptatem quisquam cumque totam
+                  necessitatibus, iusto ratione dolorum temporibus aperiam repellendus nemo quo esse quam qui nihil
+                  eius.
+                </p>
+                <a class="flex items-center ml-auto font-bold text-[14px] uppercase text-orange-600" href="#">
+                  <span>Read more</span>
+                  <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </li>
+            <li class="blog-post max-w-[880px] w-full" data-category="news">
+              <img class="mb-5" src="./assets/images/post-9.jpg" alt="" width="880" height="500">
+              <div>
+                <ul class="flex flex-wrap items-center gap-y-2 gap-x-4 xl:gap-x-8">
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-calendar mr-2 text-orange-400"></i>
+                    <time class="text-[14px] text-neutral-600" datetime="2021-05-12">May 12, 2021</time>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-user mr-2 text-orange-400"></i>
+                    <span class="text-[14px] text-neutral-600"> Colton Haynes</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-eye mr-2 text-orange-400"></i>
+                    <span class="text-[14px] text-neutral-600">2,822</span>
+                  </li>
+                </ul>
+                <h2 class="mb-3 font-semibold text-2xl leading-8 md:text-3xl md:leading-10">
+                  Lead Generation and Your coworking Marketing Strategy
+                </h2>
+                <p class="mb-5 font-semibold text-neutral-500">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque totam id rem similique, temporibus odit
+                  laboriosam dicta facere, repudiandae fugit eius alias et omnis libero aliquid quod minima ullam a
+                  delectus blanditiis deserunt.
+                </p>
+                <a class="flex items-center ml-auto font-bold text-[14px] uppercase text-orange-600" href="#">
+                  <span>Read more</span>
+                  <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </li>
+            <li class="blog-post max-w-[880px] w-full" data-category="tutorials">
+              <img class="mb-5" src="./assets/images/post-4.jpg" alt="" width="880" height="500">
+              <div>
+                <ul class="flex flex-wrap items-center gap-y-2 gap-x-4 xl:gap-x-8">
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-calendar mr-2 text-orange-400"></i>
+                    <time class="text-[14px] text-neutral-600" datetime="2023-03-02">March 02, 2023</time>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-user mr-2 text-orange-400"></i>
+                    <span class="text-[14px] text-neutral-600">JR Bourne</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-eye mr-2 text-orange-400"></i>
+                    <span class="text-[14px] text-neutral-600">874</span>
+                  </li>
+                </ul>
+                <h2 class="mb-3 font-semibold text-2xl leading-8 md:text-3xl md:leading-10">
+                  Creating A Marketing Plan For Your coworking Space
+                </h2>
+                <p class="mb-5 font-semibold text-neutral-500">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione dolorum ut beatae harum, explicabo
+                  possimus aliquid inventore, quo, modi quis distinctio assumenda deleniti quia suscipit. Assumenda, cum
+                  nemo.
+                </p>
+                <a class="flex items-center ml-auto font-bold text-[14px] uppercase text-orange-600" href="#">
+                  <span>Read more</span>
+                  <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </li>
+            <li class="blog-post max-w-[880px] w-full" data-category="opinion">
+              <img class="mb-5" src="./assets/images/post-2.jpg" alt="" width="880" height="500">
+              <div>
+                <ul class="flex flex-wrap items-center gap-y-2 gap-x-4 xl:gap-x-8">
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-calendar mr-2 text-orange-400"></i>
+                    <time class="text-[14px] text-neutral-600" datetime="2022-08-22">August 22, 2022</time>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-user mr-2 text-orange-400"></i>
+                    <span class="text-[14px] text-neutral-600">Ryan Kelley</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-eye mr-2 text-orange-400"></i>
+                    <span class="text-[14px] text-neutral-600">1,007</span>
+                  </li>
+                </ul>
+                <h2 class="mb-3 font-semibold text-2xl leading-8 md:text-3xl md:leading-10">
+                  Global IT consulting & software solutions provider
+                </h2>
+                <p class="mb-5 font-semibold text-neutral-500">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente vitae culpa doloribus quasi
+                  quisquam sequi doloremque sit excepturi sed! Natus rem minima error esse aliquam nobis pariatur ea
+                  blanditiis libero deserunt.
+                </p>
+                <a class="flex items-center ml-auto font-bold text-[14px] uppercase text-orange-600" href="#">
+                  <span>Read more</span>
+                  <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </li>
+            <li class="blog-post max-w-[880px] w-full" data-category="opinion">
+              <img class="mb-5" src="./assets/images/post-9.jpg" alt="" width="880" height="500">
+              <div>
+                <ul class="flex flex-wrap items-center gap-y-2 gap-x-4 xl:gap-x-8">
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-calendar mr-2 text-orange-400"></i>
+                    <time class="text-[14px] text-neutral-600" datetime="2023-03-15">March 15, 2023</time>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-user mr-2 text-orange-400"></i>
+                    <span class="text-[14px] text-neutral-600">Dylan O'Brien</span>
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fa-regular fa-eye mr-2 text-orange-400"></i>
+                    <span class="text-[14px] text-neutral-600">1,725</span>
+                  </li>
+                </ul>
+                <h2 class="mb-3 font-semibold text-2xl leading-8 md:text-3xl md:leading-10">
+                  Find Your Target Market for coworking Spaces
+                </h2>
+                <p class="mb-5 font-semibold text-neutral-500">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores nam adipisci necessitatibus quidem
+                  laborum, commodi est. Porro animi eveniet molestiae, placeat facilis delectus praesentium dolore
+                  aperiam ut quia consequatur nostrum ullam quam fugit distinctio?
+                </p>
+                <a class="flex items-center ml-auto font-bold text-[14px] uppercase text-orange-600" href="#">
+                  <span>Read more</span>
+                  <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <div class="order-first p-7 bg-white md:p-10" id="category-filter">
+            <h3 class="category-title flex items-center mb-5 font-semibold text-[22px]">Categories</h3>
+            <button
+              class="filter-btn block w-full py-1 font-semibold text-[17px] text-left cursor-pointer ease-in duration-200 hover:text-orange-600 active"
+              data-category="all">All</button>
+            <button
+              class="filter-btn block w-full py-1 font-semibold text-[17px] text-left cursor-pointer ease-in duration-200 hover:text-orange-600"
+              data-category="news">News</button>
+            <button
+              class="filter-btn block w-full py-1 font-semibold text-[17px] text-left cursor-pointer ease-in duration-200 hover:text-orange-600"
+              data-category="tutorials">Tutorials</button>
+            <button
+              class="filter-btn block w-full py-1 font-semibold text-[17px] text-left cursor-pointer ease-in duration-200 hover:text-orange-600"
+              data-category="opinion">Opinion</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site footer -->
+  <footer class="py-[60px] bg-slate-800">
+    <div class="container mx-auto px-4 xl:px-20">
+      <div class="grid grid-cols-1 mb-[50px] lg:grid-cols-4">
+        <div class="mb-5 lg:mb-0">
+          <a href="index.html">
+            <img class="site-logo-img" src="./assets/images/site-logo-white.png" alt="" width="250px" height="60px">
+          </a>
+        </div>
+        <h2 class="font-bold text-3xl text-white lg:col-span-3">Business management tools are all the systems, <br>
+          application
+          controls, calculating solutions.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        <div></div>
+
+        <div>
+          <h3 class="mb-7 font-semibold leading-[32px] text-[22px] text-white">Our Company</h3>
+          <ul class="flex">
+            <li class="mr-16">
+              <ul>
+                <li class="mb-3">
+                  <a class="font-semibold text-sm text-slate-300 capitalize hover:text-white" href="#">Contact us</a>
+                </li>
+                <li class="mb-3">
+                  <a class="font-semibold text-sm text-slate-300 capitalize hover:text-white" href="#">Report a bug</a>
+                </li>
+                <li class="mb-3">
+                  <a class="font-semibold text-sm text-slate-300 capitalize hover:text-white" href="./about.html">About
+                    us</a>
+                </li>
+                <li class="mb-3">
+                  <a class="font-semibold text-sm text-slate-300 capitalize hover:text-white" href="#">Product</a>
+                </li>
+                <li class="mb-3">
+                  <a class="font-semibold text-sm text-slate-300 capitalize hover:text-white" href="#">Hiring</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <ul>
+                <li class="mb-3">
+                  <a class="font-semibold text-sm text-slate-300 uppercase hover:text-white" href="#">Faq</a>
+                </li>
+                <li class="mb-3">
+                  <a class="font-semibold text-sm text-slate-300 capitalize hover:text-white" href="#">Careers</a>
+                </li>
+                <li class="mb-3">
+                  <a class="font-semibold text-sm text-slate-300 capitalize hover:text-white" href="#">Home</a>
+                </li>
+                <li class="mb-3">
+                  <a class="font-semibold text-sm text-slate-300 capitalize hover:text-white" href="#">Our blog</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="mb-7 font-semibold leading-[32px] text-[22px] text-white capitalize">Need help</h3>
+          <ul>
+            <li class="mb-3.5">
+              <h4 class="mb-1 capitalize text-neutral-300 text-sm">Customer care</h4>
+              <a class="font-medium text-[17px] leading-[27px] text-white"
+                href="tel:(+1)555234-8765">(+1)555234-8765</a>
+            </li>
+
+            <li>
+              <h4 class="mb-1 text-neutral-300 text-sm">Need live support?</h4>
+              <a class="font-medium text-[17px] leading-[27px] text-white"
+                href="mailto:hello@infoxido.com">hello@infoxido.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="mb-7 font-bold text-[22px] leading-[32px] capitalize text-white">Keep in touch</h3>
+          <form class="mb-5" action="#">
+            <input class="footer-email-input w-full pb-3.5 font-bold text-white bg-transparent lg:max-w-[307px]"
+              type="email" placeholder="Get news & updates">
+          </form>
+          <p class="mb-5 text-sm text-white">
+            Our expertise, as well as our passion for web design sets us apart from other agencies
+          </p>
+
+          <ul class="flex items-center gap-x-5">
+            <li>
+              <a href="https://www.facebook.com/" target="_blank">
+                <i class="fa-brands fa-square-facebook header-facebook-icon text-white"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/" target="_blank">
+                <i class="fa-brands fa-twitter header-twitter-icon text-white"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/" target="_blank">
+                <i class="fa-brands fa-instagram header-instagram-icon text-white"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/" target="_blank">
+                <i class="fa-brands fa-youtube header-youtube-icon text-white"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="my-7">
+
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="mb-5">
+          <p class="text-sm text-center text-white lg:text-left">Copyright © 2022 <a class="text-white"
+              href="#">Xido</a>, All Rights
+            Reserved.
+          </p>
+        </div>
+        <ul class="flex justify-center lg:justify-end">
+          <li>
+            <a class="text-sm text-slate-300 capitalize" href="#">Privacy policy</a>
+          </li>
+          <li>
+            <a class="footer-end-link text-sm text-slate-300 capitalize" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Form modal -->
+  <div class="modal-start">
+    <div class="modal-wrapper">
+      <div class="modal">
+        <form class="modal-form">
+          <label class="form-label">
+            User name
+            <input class="form-name-input" type="text" name="useName" minlength="2" maxlength="15" placeholder="John"
+              required>
+          </label>
+          <label class="form-label">
+            Subject 1
+            <select class="form-select" name="userChoise">
+              <option value="firstValue">Value 1</option>
+              <option value="secondValue">Value 2</option>
+              <option value="thirdValue">Value 3</option>
+            </select>
+          </label>
+          <label class="form-label">
+            Subject 2
+            <select class="form-select" name="example">
+              <option selected value="example">Value 1</option>
+              <option value="secondExample">Value 2</option>
+              <option value="thirdExample">Value 3</option>
+            </select>
+          </label>
+          <label class="form-label ">
+            Your text
+            <textarea class="form-textarea" name="userMessage" cols="50" rows="5">. . .</textarea>
+          </label>
+
+          <div class="form-btns">
+            <button class="form-cansel-btn">Cansel</button>
+            <button class="form-submit-btn" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slick js -->
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="vender/slick/slick.js"></script>
+  <!-- Main js -->
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

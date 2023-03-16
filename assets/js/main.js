@@ -189,3 +189,33 @@ $('.employees-list').slick({
     }
   ]
 });
+
+// ! blog page's codes
+// get the category filter buttons
+const filterBtns = document.querySelectorAll('.filter-btn');
+
+// get the container for the blog posts
+const blogPostsContainer = document.getElementById('blog-posts');
+
+// get all the blog posts
+const blogPosts = blogPostsContainer.querySelectorAll('.blog-post');
+
+// loop through each filter button and add a click event listener
+filterBtns.forEach(button => {
+  button.addEventListener('click', () => {
+    // remove the "active" class from all buttons
+    filterBtns.forEach(btn => btn.classList.remove('active'));
+    // add the "active" class to the clicked button
+    button.classList.add('active');
+    // get the selected category from the button's data-category attribute
+    const category = button.dataset.category;
+    // loop through each blog post and hide/show based on the selected category
+    blogPosts.forEach(post => {
+      if (category === 'all' || post.dataset.category === category) {
+        post.style.display = 'block';
+      } else {
+        post.style.display = 'none';
+      }
+    });
+  });
+});
