@@ -1107,6 +1107,16 @@ p {
 }
 
 /* ! Blog page's styles */
+.filter-btn::before {
+   content: "";
+   display: inline-block;
+   width: 4px;
+   height: 4px;
+   margin-right: 8px;
+   background-color: #000;
+   border-radius: 50%;
+}
+
 .filter-btn.active {
    font-size: 18px;
    color: #ea580c;
@@ -1136,3 +1146,9 @@ p {
    margin-right: 10px;
    background-color: #000;
 }
+
+.more-viewed-blogs:not(:last-child) {
+   margin-bottom: 20px;
+}
+
+/* ! Post one styles */
