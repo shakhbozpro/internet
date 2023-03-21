@@ -702,6 +702,14 @@ video {
   margin-top: -100px;
 }
 
+.mr-20 {
+  margin-right: 5rem;
+}
+
+.mr-8 {
+  margin-right: 2rem;
+}
+
 .block {
   display: block;
 }
@@ -730,6 +738,10 @@ video {
   height: 100px;
 }
 
+.h-\[54px\] {
+  height: 54px;
+}
+
 .max-h-\[340px\] {
   max-height: 340px;
 }
@@ -738,20 +750,44 @@ video {
   max-height: 500px;
 }
 
+.max-h-\[680\] {
+  max-height: 680;
+}
+
+.max-h-\[600\] {
+  max-height: 600;
+}
+
+.max-h-\[600px\] {
+  max-height: 600px;
+}
+
+.max-h-\[580px\] {
+  max-height: 580px;
+}
+
+.max-h-\[550px\] {
+  max-height: 550px;
+}
+
 .min-h-\[75px\] {
   min-height: 75px;
+}
+
+.min-h-\[54px\] {
+  min-height: 54px;
 }
 
 .w-full {
   width: 100%;
 }
 
-.w-\[50\%\] {
-  width: 50%;
+.w-\[50px\] {
+  width: 50px;
 }
 
-.w-6 {
-  width: 1.5rem;
+.min-w-\[50px\] {
+  min-width: 50px;
 }
 
 .max-w-\[100px\] {
@@ -969,11 +1005,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-orange-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(234 88 12 / var(--tw-bg-opacity));
-}
-
 .p-3 {
   padding: 0.75rem;
 }
@@ -1069,6 +1100,11 @@ video {
   padding-bottom: 1rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .py-\[18px\] {
   padding-top: 18px;
   padding-bottom: 18px;
@@ -1097,26 +1133,6 @@ video {
 .py-\[6px\] {
   padding-top: 6px;
   padding-bottom: 6px;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-.px-\[42\.5px\] {
-  padding-left: 42.5px;
-  padding-right: 42.5px;
 }
 
 .pb-10 {
@@ -1223,10 +1239,6 @@ video {
   text-align: justify;
 }
 
-.font-serif {
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1318,6 +1330,11 @@ video {
   line-height: 1rem;
 }
 
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1388,6 +1405,10 @@ video {
 
 .leading-\[72px\] {
   line-height: 72px;
+}
+
+.leading-10 {
+  line-height: 2.5rem;
 }
 
 .tracking-tighter {
@@ -1855,6 +1876,10 @@ video {
 
   .xl\:max-w-\[700px\] {
     max-width: 700px;
+  }
+
+  .xl\:max-w-\[880px\] {
+    max-width: 880px;
   }
 
   .xl\:grid-cols-2 {
