@@ -54,6 +54,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 html {
    line-height: 1.15;
    /* 1 */
@@ -1156,4 +1163,15 @@ p {
 
 .more-viewed-blogs:not(:last-child) {
    margin-bottom: 20px;
+}
+
+/* ! Contact page styles */
+.contact-icon  {
+   -webkit-transition: all 0.3s ease;
+   -o-transition: all 0.3s ease;
+   transition: all 0.3s ease;
+}
+.contact-item:hover .contact-icon {
+   color: #ffffff;
+   background-color: #ff6c1c;
 }
